@@ -1,0 +1,174 @@
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,400;1,500&display=swap');
+
+.App {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.planner {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", Arial;
+  font-weight: 500;
+
+  @media screen and (max-width: 520px){
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+    margin: 20px;
+
+    @media (max-width: 520px) {
+      max-width: 100vw;
+    }
+
+    &.main {
+      min-width: 400px;
+    }
+
+    &.aside {
+      min-width: 230px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    background: #1890ff;
+    color: #fff;
+    padding: 8px;
+    height: 50px;
+    width: 100%;
+    font-weight: 600;
+
+    &.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__plan-name {
+    width: 100px;
+  }
+
+  &__wrapper {
+    height: 200px;
+    overflow: auto;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__new-task {
+    display: flex;
+  }
+
+  &__row {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.footer {
+
+      &.text-end {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__btn {
+    min-width: 100px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.timer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__input {
+    width: 50px;
+    text-align: center;
+  }
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+
+  &__duration {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &.current {
+    background: rgb(120, 231, 120);
+
+    &.break {
+      background: #ccc;
+    }
+  }
+
+  &.completed {
+    // .task__name {
+    //   text-decoration: line-through;
+    // }
+    opacity: .6;
+    pointer-events: none;
+  }
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 8px;
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__date {
+    font-weight: 400;
+  }
+
+  &:hover,&.current {
+    background: #ddd;
+  }
+}
+
+.calendar {
+  margin-top: 20px;
+
+  &__header {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 5%;
+  }
+}
+
